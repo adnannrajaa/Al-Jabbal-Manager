@@ -3,3 +3,7 @@
 ################################################################################
 
 /AljabbalManager/bin/Debug
+/.vs
+/AljabbalManager/obj/x86
+/ASDBFramework/bin/Debug
+/ASDBFramework/obj

@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ExpensesDataSet" targetNamespace="http://tempuri.org/ExpensesDataSet.xsd" xmlns:mstns="http://tempuri.org/ExpensesDataSet.xsd" xmlns="http://tempuri.org/ExpensesDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ExpensesDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ExpensesDataSet" msprop:Generator_UserDSName="ExpensesDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ExpensesDaily" msprop:Generator_TableClassName="ExpensesDailyDataTable" msprop:Generator_TableVarName="tableExpensesDaily" msprop:Generator_TablePropName="ExpensesDaily" msprop:Generator_RowDeletingName="ExpensesDailyRowDeleting" msprop:Generator_RowChangingName="ExpensesDailyRowChanging" msprop:Generator_RowEvHandlerName="ExpensesDailyRowChangeEventHandler" msprop:Generator_RowDeletedName="ExpensesDailyRowDeleted" msprop:Generator_UserTableName="ExpensesDaily" msprop:Generator_RowChangedName="ExpensesDailyRowChanged" msprop:Generator_RowEvArgName="ExpensesDailyRowChangeEvent" msprop:Generator_RowClassName="ExpensesDailyRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="OfficeExpenses" msprop:Generator_ColumnVarNameInTable="columnOfficeExpenses" msprop:Generator_ColumnPropNameInRow="OfficeExpenses" msprop:Generator_ColumnPropNameInTable="OfficeExpensesColumn" msprop:Generator_UserColumnName="OfficeExpenses" type="xs:int" minOccurs="0" />
+              <xs:element name="Advertisement" msprop:Generator_ColumnVarNameInTable="columnAdvertisement" msprop:Generator_ColumnPropNameInRow="Advertisement" msprop:Generator_ColumnPropNameInTable="AdvertisementColumn" msprop:Generator_UserColumnName="Advertisement" type="xs:int" minOccurs="0" />
+              <xs:element name="OtherExpanses" msprop:Generator_ColumnVarNameInTable="columnOtherExpanses" msprop:Generator_ColumnPropNameInRow="OtherExpanses" msprop:Generator_ColumnPropNameInTable="OtherExpansesColumn" msprop:Generator_UserColumnName="OtherExpanses" type="xs:int" minOccurs="0" />
+              <xs:element name="TotalExpenses" msprop:Generator_ColumnVarNameInTable="columnTotalExpenses" msprop:Generator_ColumnPropNameInRow="TotalExpenses" msprop:Generator_ColumnPropNameInTable="TotalExpensesColumn" msprop:Generator_UserColumnName="TotalExpenses" type="xs:int" minOccurs="0" />
+              <xs:element name="CurrentDay" msprop:Generator_ColumnVarNameInTable="columnCurrentDay" msprop:Generator_ColumnPropNameInRow="CurrentDay" msprop:Generator_ColumnPropNameInTable="CurrentDayColumn" msprop:Generator_UserColumnName="CurrentDay" type="xs:string" minOccurs="0" />
+              <xs:element name="CreatedDate" msprop:Generator_ColumnVarNameInTable="columnCreatedDate" msprop:Generator_ColumnPropNameInRow="CreatedDate" msprop:Generator_ColumnPropNameInTable="CreatedDateColumn" msprop:Generator_UserColumnName="CreatedDate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ExpensesMonthly" msprop:Generator_TableClassName="ExpensesMonthlyDataTable" msprop:Generator_TableVarName="tableExpensesMonthly" msprop:Generator_RowChangedName="ExpensesMonthlyRowChanged" msprop:Generator_TablePropName="ExpensesMonthly" msprop:Generator_RowDeletingName="ExpensesMonthlyRowDeleting" msprop:Generator_RowChangingName="ExpensesMonthlyRowChanging" msprop:Generator_RowEvHandlerName="ExpensesMonthlyRowChangeEventHandler" msprop:Generator_RowDeletedName="ExpensesMonthlyRowDeleted" msprop:Generator_RowClassName="ExpensesMonthlyRow" msprop:Generator_UserTableName="ExpensesMonthly" msprop:Generator_RowEvArgName="ExpensesMonthlyRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TelephoneBill" msprop:Generator_ColumnVarNameInTable="columnTelephoneBill" msprop:Generator_ColumnPropNameInRow="TelephoneBill" msprop:Generator_ColumnPropNameInTable="TelephoneBillColumn" msprop:Generator_UserColumnName="TelephoneBill" type="xs:int" minOccurs="0" />
+              <xs:element name="ElectricityBill" msprop:Generator_ColumnVarNameInTable="columnElectricityBill" msprop:Generator_ColumnPropNameInRow="ElectricityBill" msprop:Generator_ColumnPropNameInTable="ElectricityBillColumn" msprop:Generator_UserColumnName="ElectricityBill" type="xs:int" minOccurs="0" />
+              <xs:element name="BuildingRent" msprop:Generator_ColumnVarNameInTable="columnBuildingRent" msprop:Generator_ColumnPropNameInRow="BuildingRent" msprop:Generator_ColumnPropNameInTable="BuildingRentColumn" msprop:Generator_UserColumnName="BuildingRent" type="xs:int" minOccurs="0" />
+              <xs:element name="InternetCharges" msprop:Generator_ColumnVarNameInTable="columnInternetCharges" msprop:Generator_ColumnPropNameInRow="InternetCharges" msprop:Generator_ColumnPropNameInTable="InternetChargesColumn" msprop:Generator_UserColumnName="InternetCharges" type="xs:int" minOccurs="0" />
+              <xs:element name="TotalExpenses" msprop:Generator_ColumnVarNameInTable="columnTotalExpenses" msprop:Generator_ColumnPropNameInRow="TotalExpenses" msprop:Generator_ColumnPropNameInTable="TotalExpensesColumn" msprop:Generator_UserColumnName="TotalExpenses" type="xs:int" minOccurs="0" />
+              <xs:element name="CurrentMonth" msprop:Generator_ColumnVarNameInTable="columnCurrentMonth" msprop:Generator_ColumnPropNameInRow="CurrentMonth" msprop:Generator_ColumnPropNameInTable="CurrentMonthColumn" msprop:Generator_UserColumnName="CurrentMonth" type="xs:string" minOccurs="0" />
+              <xs:element name="CurrentYear" msprop:Generator_ColumnVarNameInTable="columnCurrentYear" msprop:Generator_ColumnPropNameInRow="CurrentYear" msprop:Generator_ColumnPropNameInTable="CurrentYearColumn" msprop:Generator_UserColumnName="CurrentYear" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,760 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{32ECD375-6007-42FE-886D-04F2EA7B6052}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ASDBFramework</RootNamespace>
+    <AssemblyName>AljabbalManager</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\SAP BusinessObjects\Crystal Reports for .NET Framework 4.0\Common\SAP BusinessObjects Enterprise XI 4.0\win32_x86\dotnet\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Models\Expenses\DailyExpense.cs" />
+    <Compile Include="Models\Expenses\Drawings.cs" />
+    <Compile Include="Models\Expenses\FreightIn.cs" />
+    <Compile Include="Models\Expenses\MonthlyExpenses.cs" />
+    <Compile Include="Models\Expenses\Wages.cs" />
+    <Compile Include="Models\Products\ProductsDetail.cs" />
+    <Compile Include="Models\Products\ProductStock.cs" />
+    <Compile Include="Models\Purchases\PurchasesPaymentRecord.cs" />
+    <Compile Include="Models\Sales\SalesPaymentRecord.cs" />
+    <Compile Include="Models\Users\ProductLicense.cs" />
+    <Compile Include="Models\Purchases\Purchase.cs" />
+    <Compile Include="Models\Users\LoggedInUser.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Screens\NotificationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\NotificationForm.Designer.cs">
+      <DependentUpon>NotificationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\SplashScreen\SplashScreenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\SplashScreen\SplashScreenForm.Designer.cs">
+      <DependentUpon>SplashScreenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Debiters\CompanyPayable\CompanyPayableForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Debiters\CompanyPayable\CompanyPayableForm.Designer.cs">
+      <DependentUpon>CompanyPayableForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Debiters\CompanyPayable\CompanyPaymentCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CompanyPaymentCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Debiters\CompanyPayable\CompanyPaymentHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Debiters\CompanyPayable\CompanyPaymentHistoryForm.Designer.cs">
+      <DependentUpon>CompanyPaymentHistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Debiters\CompanyPayable\PrintCompanyPaymentHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Debiters\CompanyPayable\PrintCompanyPaymentHistoryForm.Designer.cs">
+      <DependentUpon>PrintCompanyPaymentHistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Debiters\CustomerDebtors\CustomerDebtorsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Debiters\CustomerDebtors\CustomerDebtorsForm.Designer.cs">
+      <DependentUpon>CustomerDebtorsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Debiters\CustomerDebtors\CustomerPaymentHistoryCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerPaymentHistoryCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Debiters\CustomerDebtors\CustomerPaymentHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Debiters\CustomerDebtors\CustomerPaymentHistoryForm.Designer.cs">
+      <DependentUpon>CustomerPaymentHistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Debiters\CustomerDebtors\PrintPaymentHistoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Debiters\CustomerDebtors\PrintPaymentHistoryForm.Designer.cs">
+      <DependentUpon>PrintPaymentHistoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Debiters\DebitersDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DebitersDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Debiters\DebitersDeshBoard\DebiterDeshBoardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Debiters\DebitersDeshBoard\DebiterDeshBoardForm.Designer.cs">
+      <DependentUpon>DebiterDeshBoardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Expenses\Daily\DailyExpensesCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DailyExpensesCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Expenses\Daily\DailyExpensesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Expenses\Daily\DailyExpensesForm.Designer.cs">
+      <DependentUpon>DailyExpensesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Expenses\Daily\PrintDailyExpensesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Expenses\Daily\PrintDailyExpensesForm.Designer.cs">
+      <DependentUpon>PrintDailyExpensesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Expenses\DrawingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Expenses\DrawingsForm.Designer.cs">
+      <DependentUpon>DrawingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Expenses\ExpensesDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExpensesDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Expenses\ExpensesDeshBoard\ExpensesDeshBoardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Expenses\ExpensesDeshBoard\ExpensesDeshBoardForm.Designer.cs">
+      <DependentUpon>ExpensesDeshBoardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Expenses\FreightInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Expenses\FreightInForm.Designer.cs">
+      <DependentUpon>FreightInForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Expenses\Monthly\MonthlyExpensesCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MonthlyExpensesCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Expenses\Monthly\MonthlyExpensesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Expenses\Monthly\MonthlyExpensesForm.Designer.cs">
+      <DependentUpon>MonthlyExpensesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Expenses\Monthly\PrintMonthlyExpensesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Expenses\Monthly\PrintMonthlyExpensesForm.Designer.cs">
+      <DependentUpon>PrintMonthlyExpensesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Expenses\WagesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Expenses\WagesForm.Designer.cs">
+      <DependentUpon>WagesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Income\BalanceSheetForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Income\BalanceSheetForm.Designer.cs">
+      <DependentUpon>BalanceSheetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Income\IncomeDeshBoard\FinicalTransactionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Income\IncomeDeshBoard\FinicalTransactionForm.Designer.cs">
+      <DependentUpon>FinicalTransactionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Income\IncomeStatment\IncomeStatmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Income\IncomeStatment\IncomeStatmentForm.Designer.cs">
+      <DependentUpon>IncomeStatmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ModelScreens\PurchasesModel\PurchasesProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\ModelScreens\PurchasesModel\PurchasesProductForm.Designer.cs">
+      <DependentUpon>PurchasesProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ModelScreens\SalesModel\SalesProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\ModelScreens\SalesModel\SalesProductForm.Designer.cs">
+      <DependentUpon>SalesProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ModelScreens\StockModel\SelectProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\ModelScreens\StockModel\SelectProductForm.Designer.cs">
+      <DependentUpon>SelectProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Income\IncomeStatment\PrintIncomeStatmentCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PrintIncomeStatmentCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Income\IncomeStatment\PrintIncomeStatmentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Income\IncomeStatment\PrintIncomeStatmentForm.Designer.cs">
+      <DependentUpon>PrintIncomeStatmentForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Income\ShareholderEquity\CapitalStock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Income\ShareholderEquity\CapitalStock.Designer.cs">
+      <DependentUpon>CapitalStock.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\ProductLicense\LicenseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\ProductLicense\LicenseForm.Designer.cs">
+      <DependentUpon>LicenseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Products\ManageToken\ManageTokenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Products\ManageToken\ManageTokenForm.Designer.cs">
+      <DependentUpon>ManageTokenForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Products\ProductDeshBoard\ProductDeshBoardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Products\ProductDeshBoard\ProductDeshBoardForm.Designer.cs">
+      <DependentUpon>ProductDeshBoardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Products\ProductsManagment\ProductsDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Products\ProductsManagment\ProductsDetailForm.Designer.cs">
+      <DependentUpon>ProductsDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Products\ProductsManagment\StockDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Products\ProductsManagment\StockDetailForm.Designer.cs">
+      <DependentUpon>StockDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Products\ViewProducts\ShortProductsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Products\ViewProducts\ShortProductsForm.Designer.cs">
+      <DependentUpon>ShortProductsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Products\ViewProducts\ViewAllProductsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Products\ViewProducts\ViewAllProductsForm.Designer.cs">
+      <DependentUpon>ViewAllProductsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Products\ViewProducts\ViewByFilterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Products\ViewProducts\ViewByFilterForm.Designer.cs">
+      <DependentUpon>ViewByFilterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Sales\SaleInvoice\MakeInvoiceCrystalReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MakeInvoiceCrystalReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Sales\SaleInvoice\MakeInvoiceDataSet.cs">
+      <DependentUpon>MakeInvoiceDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Sales\SaleInvoice\MakeInvoiceDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MakeInvoiceDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Sales\SaleInvoice\MakeInvoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Sales\SaleInvoice\MakeInvoiceForm.Designer.cs">
+      <DependentUpon>MakeInvoiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Sales\SaleReport\SaleReportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Sales\SaleReport\SaleReportForm.Designer.cs">
+      <DependentUpon>SaleReportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Sales\SalesDeshBoard\SalesDeshBoardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Sales\SalesDeshBoard\SalesDeshBoardForm.Designer.cs">
+      <DependentUpon>SalesDeshBoardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Users\LoginPages\ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Users\LoginPages\ChangePasswordForm.Designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Users\LoginPages\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Users\LoginPages\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Templates\TemplateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\Templates\TemplateForm.Designer.cs">
+      <DependentUpon>TemplateForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Products\Purchases\AddNewPurchasesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Products\Purchases\AddNewPurchasesForm.Designer.cs">
+      <DependentUpon>AddNewPurchasesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Sales\SaleInvoice\SaleInvoiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Sales\SaleInvoice\SaleInvoiceForm.Designer.cs">
+      <DependentUpon>SaleInvoiceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Sales\SalesReturnForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Sales\SalesReturnForm.Designer.cs">
+      <DependentUpon>SalesReturnForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\MainDeshBoard\UserDeshBoardForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\MainDeshBoard\UserDeshBoardForm.Designer.cs">
+      <DependentUpon>UserDeshBoardForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Users\LoginPages\MainLoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Users\LoginPages\MainLoginForm.Designer.cs">
+      <DependentUpon>MainLoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Users\ManageEmployees\AddNewEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Users\ManageEmployees\AddNewEmployeeForm.Designer.cs">
+      <DependentUpon>AddNewEmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Users\ManageEmployees\ManageEmployeesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Users\ManageEmployees\ManageEmployeesForm.Designer.cs">
+      <DependentUpon>ManageEmployeesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Users\ManageShareholders\AddNewShareholderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Users\ManageShareholders\AddNewShareholderForm.Designer.cs">
+      <DependentUpon>AddNewShareholderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Users\ManageShareholders\ManageShareholdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Users\ManageShareholders\ManageShareholdersForm.Designer.cs">
+      <DependentUpon>ManageShareholdersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Users\ManageUsers\AddNewUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Users\ManageUsers\AddNewUserForm.Designer.cs">
+      <DependentUpon>AddNewUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Users\MainUserInterface\UserInterfaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Users\MainUserInterface\UserInterfaceForm.Designer.cs">
+      <DependentUpon>UserInterfaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Users\ManageUsers\ManageUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Screens\UserScreens\Users\ManageUsers\ManageUserForm.Designer.cs">
+      <DependentUpon>ManageUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Utillities\AppSetting.cs" />
+    <Compile Include="Utillities\Lists\ListData.cs" />
+    <Compile Include="Utillities\SystemEnums.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Screens\NotificationForm.resx">
+      <DependentUpon>NotificationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\SplashScreen\SplashScreenForm.resx">
+      <DependentUpon>SplashScreenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Debiters\CompanyPayable\CompanyPayableForm.resx">
+      <DependentUpon>CompanyPayableForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Debiters\CompanyPayable\CompanyPaymentCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CompanyPaymentCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Debiters\CompanyPayable\CompanyPaymentHistoryForm.resx">
+      <DependentUpon>CompanyPaymentHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Debiters\CompanyPayable\PrintCompanyPaymentHistoryForm.resx">
+      <DependentUpon>PrintCompanyPaymentHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Debiters\CustomerDebtors\CustomerDebtorsForm.resx">
+      <DependentUpon>CustomerDebtorsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Debiters\CustomerDebtors\CustomerPaymentHistoryCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CustomerPaymentHistoryCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Debiters\CustomerDebtors\CustomerPaymentHistoryForm.resx">
+      <DependentUpon>CustomerPaymentHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Debiters\CustomerDebtors\PrintPaymentHistoryForm.resx">
+      <DependentUpon>PrintPaymentHistoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Debiters\DebitersDeshBoard\DebiterDeshBoardForm.resx">
+      <DependentUpon>DebiterDeshBoardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Expenses\Daily\DailyExpensesCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>DailyExpensesCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Expenses\Daily\DailyExpensesForm.resx">
+      <DependentUpon>DailyExpensesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Expenses\Daily\PrintDailyExpensesForm.resx">
+      <DependentUpon>PrintDailyExpensesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Expenses\DrawingsForm.resx">
+      <DependentUpon>DrawingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Expenses\ExpensesDeshBoard\ExpensesDeshBoardForm.resx">
+      <DependentUpon>ExpensesDeshBoardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Expenses\FreightInForm.resx">
+      <DependentUpon>FreightInForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Expenses\Monthly\MonthlyExpensesCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MonthlyExpensesCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Expenses\Monthly\MonthlyExpensesForm.resx">
+      <DependentUpon>MonthlyExpensesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Expenses\Monthly\PrintMonthlyExpensesForm.resx">
+      <DependentUpon>PrintMonthlyExpensesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Expenses\WagesForm.resx">
+      <DependentUpon>WagesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Income\BalanceSheetForm.resx">
+      <DependentUpon>BalanceSheetForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Income\IncomeDeshBoard\FinicalTransactionForm.resx">
+      <DependentUpon>FinicalTransactionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Income\IncomeStatment\IncomeStatmentForm.resx">
+      <DependentUpon>IncomeStatmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\ModelScreens\PurchasesModel\PurchasesProductForm.resx">
+      <DependentUpon>PurchasesProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\ModelScreens\SalesModel\SalesProductForm.resx">
+      <DependentUpon>SalesProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\ModelScreens\StockModel\SelectProductForm.resx">
+      <DependentUpon>SelectProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Income\IncomeStatment\PrintIncomeStatmentCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>PrintIncomeStatmentCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Income\IncomeStatment\PrintIncomeStatmentForm.resx">
+      <DependentUpon>PrintIncomeStatmentForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Income\ShareholderEquity\CapitalStock.resx">
+      <DependentUpon>CapitalStock.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\ProductLicense\LicenseForm.resx">
+      <DependentUpon>LicenseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Products\ManageToken\ManageTokenForm.resx">
+      <DependentUpon>ManageTokenForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Products\ProductDeshBoard\ProductDeshBoardForm.resx">
+      <DependentUpon>ProductDeshBoardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Products\ProductsManagment\ProductsDetailForm.resx">
+      <DependentUpon>ProductsDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Products\ProductsManagment\StockDetailForm.resx">
+      <DependentUpon>StockDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Products\ViewProducts\ShortProductsForm.resx">
+      <DependentUpon>ShortProductsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Products\ViewProducts\ViewAllProductsForm.resx">
+      <DependentUpon>ViewAllProductsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Products\ViewProducts\ViewByFilterForm.resx">
+      <DependentUpon>ViewByFilterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Sales\SaleInvoice\MakeInvoiceCrystalReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>MakeInvoiceCrystalReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Sales\SaleInvoice\MakeInvoiceForm.resx">
+      <DependentUpon>MakeInvoiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Sales\SaleReport\SaleReportForm.resx">
+      <DependentUpon>SaleReportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Sales\SalesDeshBoard\SalesDeshBoardForm.resx">
+      <DependentUpon>SalesDeshBoardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Users\LoginPages\ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Users\LoginPages\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Templates\TemplateForm.resx">
+      <DependentUpon>TemplateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Products\Purchases\AddNewPurchasesForm.resx">
+      <DependentUpon>AddNewPurchasesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Sales\SaleInvoice\SaleInvoiceForm.resx">
+      <DependentUpon>SaleInvoiceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Sales\SalesReturnForm.resx">
+      <DependentUpon>SalesReturnForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\MainDeshBoard\UserDeshBoardForm.resx">
+      <DependentUpon>UserDeshBoardForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Users\LoginPages\MainLoginForm.resx">
+      <DependentUpon>MainLoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Users\ManageEmployees\AddNewEmployeeForm.resx">
+      <DependentUpon>AddNewEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Users\ManageEmployees\ManageEmployeesForm.resx">
+      <DependentUpon>ManageEmployeesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Users\ManageShareholders\AddNewShareholderForm.resx">
+      <DependentUpon>AddNewShareholderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Users\ManageShareholders\ManageShareholdersForm.resx">
+      <DependentUpon>ManageShareholdersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Users\ManageUsers\AddNewUserForm.resx">
+      <DependentUpon>AddNewUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Users\MainUserInterface\UserInterfaceForm.resx">
+      <DependentUpon>UserInterfaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\UserScreens\Users\ManageUsers\ManageUserForm.resx">
+      <DependentUpon>ManageUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Screens\UserScreens\Debiters\DebitersDataSet.xsc">
+      <DependentUpon>DebitersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Screens\UserScreens\Debiters\DebitersDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DebitersDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Screens\UserScreens\Debiters\DebitersDataSet.xss">
+      <DependentUpon>DebitersDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Screens\UserScreens\Expenses\ExpensesDataSet.xsc">
+      <DependentUpon>ExpensesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Screens\UserScreens\Expenses\ExpensesDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ExpensesDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Screens\UserScreens\Expenses\ExpensesDataSet.xss">
+      <DependentUpon>ExpensesDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Screens\UserScreens\Sales\SaleInvoice\MakeInvoiceDataSet.xsc">
+      <DependentUpon>MakeInvoiceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Screens\UserScreens\Sales\SaleInvoice\MakeInvoiceDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MakeInvoiceDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Screens\UserScreens\Sales\SaleInvoice\MakeInvoiceDataSet.xss">
+      <DependentUpon>MakeInvoiceDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Screens\Icons\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ASDBFramework\ASDBFramework.csproj">
+      <Project>{1E58817B-6C31-4D5E-9AC0-F3FCCBF7CAD6}</Project>
+      <Name>ASDBFramework</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DataBase\DBAlJabbalManager.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataBase\DBAlJabbalManager_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>DBAlJabbalManager.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.10.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

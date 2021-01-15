@@ -662,6 +662,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Screens\IncomeStatement.pdf" />
+    <None Include="Screens\Invoice.pdf" />
+    <None Include="Screens\PaymentHistory.pdf" />
     <None Include="Screens\UserScreens\Debiters\DebitersDataSet.xsc">
       <DependentUpon>DebitersDataSet.xsd</DependentUpon>
     </None>
